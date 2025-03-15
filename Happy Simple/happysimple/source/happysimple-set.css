@@ -219,6 +219,19 @@ h3.md-focus:before{
     float: none;
     vertical-align: baseline;
 }
+
+h4,
+h5,
+h6 {
+    font-family: 'XiaWuWenKai';
+    position: relative;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    line-height: 1.4;
+    cursor: text;
+}
+
 /* --------------------------------------------------------------------------------------- */
 
 
@@ -232,7 +245,17 @@ blockquote{
     line-height: var(--blockquote-line-height);
     border-left: var(--blockquote-border-left);
     background-color:  var(--blockquote-background-color);
+    color: #777777;
 }
+
+
+/* 重置引用块内公式颜色 */
+blockquote .md-math-container,
+blockquote [md-inline='inline_math'] {
+    color: inherit !important;
+    opacity: 0.9;
+}
+
 
 blockquote[alt="info"]>*,
 blockquote[alt="warn"]>*,
@@ -661,145 +684,157 @@ hr {
     background-color: transparent !important;
 }
 
-/* 代码块变量颜色 */
+/* 代码块变量颜色 —— 丰富版 */
+
+/* 关键字：如 if/else，纯蓝色 */
 .cm-s-inner .cm-keyword {
-    color: #d73a49 !important; /* 关键字（如 if/else） */
+    color: #AF00DC !important;
 }
+
+/* 操作符：如 + - * / */
 .cm-s-inner .cm-operator {
-    color: #24292e !important; /* 操作符 */
+    color: #24292e !important;
 }
+
+/* 常规变量：如局部变量、参数 */
+.cm-s-inner .cm-variable {
+    color: #795E50 !important;
+}
+
+/* 变量名：特定变量，稍作区分 */
 .cm-s-inner .cm-variable-2 {
-    color: #e36209 !important; /* 变量名 */
+    color: #795E50 !important;
 }
+
+/* 特殊变量：例如 this、super，纯蓝色 */
 .cm-s-inner .cm-variable-3 {
-    color: #0000FF !important; /* 特殊变量 */
+    color: #0000FF !important;
 }
+
+/* 类型声明：纯蓝色 */
 .cm-s-inner .cm-type {
-    color: #0000FF !important; /* 类型声明 */
+    color: #0000FF !important;
 }
+
+/* 内置函数：如 console、Math 等 */
 .cm-s-inner .cm-builtin {
-    color: #005cc5 !important; /* 内置函数 */
+    color: #005cc5 !important;
 }
+
+/* 常量：如 true/false/null */
 .cm-s-inner .cm-atom {
-    color: #005cc5 !important; /* 常量（如 true/false） */
+    color: #005cc5 !important;
 }
+
+/* 数字 */
 .cm-s-inner .cm-number {
-    color: #005cc5 !important; /* 数字 */
+    color: #005cc5 !important;
 }
+
+/* 定义：例如函数名，纯蓝色 */
 .cm-s-inner .cm-def {
-    color: #0000FF !important; /* 定义（如函数名） */
+    color: #795E50 !important;
+    font-weight: bold;
 }
+
+/* 字符串 */
 .cm-s-inner .cm-string {
-    color: #22863a !important; /* 字符串 */
+    color: #22863a !important;
 }
+
+/* 模板字符串 */
 .cm-s-inner .cm-string-2 {
-    color: #22863a !important; /* 模板字符串 */
+    color: #22863a !important;
 }
+
+/* 注释 */
 .cm-s-inner .cm-comment {
-    color: #6a737d !important; /* 注释 */
+    color: #6a737d !important;
 }
+
+/* HTML/XML 标签 */
 .cm-s-inner .cm-tag {
-    color: #22863a !important; /* HTML/XML 标签 */
+    color: #22863a !important;
 }
+
+/* 元信息：例如 Markdown 标题 */
 .cm-s-inner .cm-meta {
-    color: #e36209 !important; /* 元信息（如 Markdown 标题） */
+    color: #e36209 !important;
 }
+
+/* HTML/XML 属性 */
 .cm-s-inner .cm-attribute {
-    color: #6f42c1 !important; /* HTML/XML 属性 */
+    color: #6f42c1 !important;
 }
+
+/* 对象属性 */
 .cm-s-inner .cm-property {
-    color: #005cc5 !important; /* 对象属性 */
+    color: #005cc5 !important;
 }
+
+/* 限定符：纯蓝色 */
 .cm-s-inner .cm-qualifier {
-    color: #0000FF !important; /* 限定符 */
+    color: #0000FF !important;
 }
+
+/* 括号：增加额外选择器，统一为纯蓝色 */
+.cm-s-inner .cm-bracket {
+    color: #0000FF !important;
+}
+
+/* 链接：在 Markdown 里常见 */
+.cm-s-inner .cm-link {
+    color: #032f62 !important;
+}
+
+/* 错误提示 */
 .cm-s-inner .cm-error {
     color: #fff !important;
-    background-color: #d73a49 !important; /* 错误提示 */
+    background-color: #d73a49 !important;
 }
 /* --------------------------------------------------------------------------------------- */
 
 
-/* --------------------------------------- 有序列表 --------------------------------------- */
+
+/* 有序列表（匹配 GitHub 样式） */
 #write ol {
-    margin: var(--order-list-margin);
-    padding: var(--order-list-padding);
-    font-family: var(--order-list-font-family);
+    margin: 8px 0;
+    padding-left: 30px;
+    font-family: var(--order-list-font-family, inherit);
     font-size: var(--order-list-font-size);
-    font-weight: var(--order-list-font-weight);
-    color: var(--order-list-color);
-    line-height: var(--order-list-line-height);
-    list-style-type: none;
+    font-weight: var(--order-list-font-weight, normal);
+    line-height: var(1.6);
+    list-style-type: decimal;
 }
 
-li {
-    margin: var(--order-list-li-margin);
+#write ol li {
+    margin: 4px 0;
+    padding-left: 4px;
 }
 
-#write ol li > * {
-    margin: 0px 0px 0px var(--order-list-li-indentation);
-}
-
-#write ul ol>li::before,
-#write ol>li::before {
-    position: absolute;
-    color: var(--order-list-sign-color);
-    content: counter(li) ".";
-    counter-increment: li 1;
-    width: 22px;
-    text-align: right;
-    left: -12px;
-}
-
-#write ol[start=""],
-#write ol:not([start]) {
-    counter-reset: li 0;
-}
-
-#write ol {
-    counter-reset: unset;
-}
-/* --------------------------------------------------------------------------------------- */
-
-
-/* --------------------------------------- 无序列表 --------------------------------------- */
+/* 无序列表（匹配 GitHub 样式） */
 #write ul {
-    margin: var(--unorder-list-margin);
-    padding: var(--unorder-list-padding);
-    font-family: var(--unorder-list-font-family);
+    margin: 8px 0;
+    padding-left: 30px;
+    font-family: var(--unorder-list-font-family, inherit);
     font-size: var(--unorder-list-font-size);
-    font-weight: var(--unorder-list-font-weight);
-    color: var(--unorder-list-color);
-    line-height: var(--unorder-list-line-height);
-    list-style-type: none;
+    font-weight: var(--unorder-list-font-weight, normal);
+    line-height: var(1.6);
+    list-style-type: disc;
 }
 
-li {
-    margin: var(--unorder-list-li-margin);
+#write ul li {
+    margin: 4px 0;
+    padding-left: 4px;
 }
 
-#write ul>li > * {
-    margin: 0px 0px 0px var(--unorder-list-li-indentation);
-}
-
-#write ul>li:before {
-    position: absolute;
-    top: var(--unorder-list-sign-top);
-    left: var(--unorder-list-sign-left);
-    display: inline-block;
-    content: '';
-    width: var(--unorder-list-sign-width);
-    height: var(--unorder-list-sign-height);
-    text-align: center;
-    vertical-align: middle;
-    color: var(--unorder-list-color);
-    background-color: var(--unorder-list-background-color);
-    border: 2px solid var(--unorder-list-sign-color);
-    border-radius: var(--unorder-list-border-radius);
-}
-
-#write ul li:first-child {
-    counter-reset: li;
+#write ul ul,
+#write ol ul,
+#write ul ol,
+#write ol ol {
+    margin-top: 4px;
+    margin-bottom: 4px;
+    padding-left: 32px;
 }
 /* --------------------------------------------------------------------------------------- */
 
@@ -879,7 +914,7 @@ li {
 
 /* ---------------------------------------- 表格 --------------------------------------- */
 /* 普通表格 */
-figure{
+/* figure{
     display: flex;
     justify-content: center;
     align-items:flex-start;
@@ -911,7 +946,45 @@ table tr th {
 table tr td {
     padding: 5px 10px;
     border: var(--table-border);
+} */
+
+/* 普通表格（Github格式） */
+table {
+    margin: 0.8em 0;
+    width: auto;
+    padding: 0;
+    word-break: initial;
 }
+table tr {
+    border: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 0;
+}
+table tr:nth-child(2n),
+thead {
+    background-color: #f8f8f8;
+}
+table th {
+    font-weight: bold;
+    border: 1px solid #dfe2e5;
+    border-bottom: 0;
+    margin: 0;
+    padding: 6px 13px;
+}
+table td {
+    border: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 6px 13px;
+}
+table th:first-child,
+table td:first-child {
+    margin-top: 0;
+}
+table th:last-child,
+table td:last-child {
+    margin-bottom: 0;
+}
+
 
 /* 三线表 */
 div[alt="three-table"] table tr {

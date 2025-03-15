@@ -10,7 +10,7 @@
 :root {
     /* body */
     --body-background-color: #f8f8f8;   /* 整个界面的背景颜色 */
-    --select-text-bg-color: #ffafa3;    /* 选中文本时文本的背景颜色 */
+    --select-text-bg-color: #DAE3EA;    /* 选中文本时文本的背景颜色 */
 
     /* write */
     --write-margin: 10px auto 10px;                /* 书写框的外边距 */
@@ -23,7 +23,7 @@
     --write-background: #fff;                   /* 书写框的背景颜色,使用linear-gradient可以实现渐变色 */
     --write-border: 2px solid #dfe2e5;          /* 书写框的边框 */
     --write-border-radius: 5px;                    /* 书写框的边框圆角 */
-    --write-max-width: 80%;                        /* 书写框的所占比例 */
+    --write-max-width: 90%;                        /* 书写框的所占比例 */
 
     /* favico */
     --favico-url: var(--body-bg-color);            /* 右下角的图片(可以使用动图),若想取消显示,用"var(--body-bg-color);"替代即可 */
@@ -65,9 +65,9 @@
     /* 标题(仅支持h1,h2,h3) */
     --h1-margin: 30px 0px;
     --h1-padding: 0px;
-    --h1-font-family: 'Droid Sans Fallback','XiaWuWenKai';
+    --h1-font-family: 'XiaWuWenKai';
     --h1-font-size: 2.4rem;
-    --h1-font-weight: 500;
+    --h1-font-weight: 400;
     --h1-line-height: 1.5;
     /*--h1-icon: '\e626';                            /* h1标题前的图标*/
     --h1-icon-color: #fe5f58;
@@ -76,7 +76,7 @@
 
     --h2-margin: 25px 0px;
     --h2-padding: 0px;
-    --h2-font-family: 'Droid Sans Fallback','XiaWuWenKai';
+    --h2-font-family: 'XiaWuWenKai';
     --h2-font-size: 2.0rem;
     --h2-font-weight: 400;
     --h2-line-height: 1.5;
@@ -87,7 +87,7 @@
 
     --h3-margin: 20px 0px;
     --h3-padding: 0px;
-    --h3-font-family: 'Droid Sans Fallback','XiaWuWenKai';
+    --h3-font-family: 'XiaWuWenKai';
     --h3-font-size: 1.6rem;
     --h3-font-weight: 300;
     --h3-line-height: 1.5;
@@ -98,13 +98,13 @@
     
     /* 引用块 */
     --blockquote-margin: 10px 0px;
-    --blockquote-padding: 10px;
+    --blockquote-padding: 3px 15px;
     --blockquote-font-family: 'Droid Sans Fallback', 'XiaWuWenKai';
     --blockquote-font-size: 1.0rem;
     --blockquote-font-weight: 300;
     --blockquote-line-height: 1.5;
-    --blockquote-border-left: 5px solid #5fa7e4;      /* 默认引用块的左边框 */
-    --blockquote-background-color: #F3FDFF;
+    --blockquote-border-left: 5px solid  #dfe2e5;      /* 默认引用块的左边框 */
+    --blockquote-background-color: #fafafa;
     --info-blockquote-border-left: 5px solid #5fa7e4;      /* 信息引用块的左边框 */
     --info-blockquote-background-color: #e4edf6;
     --warn-blockquote-border-left: 5px solid #f0ad4e;      /* 警告引用块的左边框 */
@@ -251,7 +251,6 @@
     --order-list-font-family: 'Droid Sans Fallback','XiaWuWenKai';
     --order-list-font-size: 1.0rem;
     --order-list-font-weight: 300;
-    --order-list-color: #000;
     --order-list-line-height: 2.0;                 /* 有序列表各项的行高 */
     --order-list-li-margin: 10px 0px;              /* 有序列表各项的间距 */
     --order-list-li-indentation: 1.0em;            /* 有序列表内容的缩进 */
@@ -263,7 +262,7 @@
     --unorder-list-font-family: 'Droid Sans Fallback','XiaWuWenKai';
     --unorder-list-font-size: 1.0rem;
     --unorder-list-font-weight: 300; 
-    --unorder-list-color: #000;                   /* 无序列表的字体颜色 */
+
     --unorder-list-line-height: 2.0;                /* 无序列表各项的行高 */
     --unorder-list-li-margin: 10px 0px;             /* 无序列表各项的间距 */
     --unorder-list-li-indentation: 1.2em;           /* 无序列表内容的缩进 */
