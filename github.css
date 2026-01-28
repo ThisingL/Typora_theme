@@ -3,40 +3,22 @@
     --control-text-color: #777;
 }
 
-@include-when-export url(https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext);
 
-/* open-sans-regular - latin-ext_latin */
 @font-face {
-    font-family: 'Open Sans';
+    font-family: 'Hack';
+    src: url('./Github/Hack-Regular.ttf') format('truetype');
+    font-weight: 400;
     font-style: normal;
-    font-weight: normal;
-    src: local('Open Sans Regular'), local('OpenSans-Regular'), url('./github/open-sans-v17-latin-ext_latin-regular.woff2') format('woff2');
-    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD, U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
-  }
-  /* open-sans-italic - latin-ext_latin */
-  @font-face {
-    font-family: 'Open Sans';
-    font-style: italic;
-    font-weight: normal;
-    src: local('Open Sans Italic'), local('OpenSans-Italic'), url('./github/open-sans-v17-latin-ext_latin-italic.woff2') format('woff2');
-    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD, U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
-  }
-  /* open-sans-700 - latin-ext_latin */
-  @font-face {
-    font-family: 'Open Sans';
+    font-display: swap;
+}
+@font-face {
+    font-family: "Droid Sans Fallback";
+    src: url('./Github/DroidSansFallback.ttf') format('truetype');
+    font-weight: 400;
     font-style: normal;
-    font-weight: bold;
-    src: local('Open Sans Bold'), local('OpenSans-Bold'), url('./github/open-sans-v17-latin-ext_latin-700.woff2') format('woff2'); 
-    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD, U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
-  }
-  /* open-sans-700italic - latin-ext_latin */
-  @font-face {
-    font-family: 'Open Sans';
-    font-style: italic;
-    font-weight: bold;
-    src: local('Open Sans Bold Italic'), local('OpenSans-BoldItalic'), url('./github/open-sans-v17-latin-ext_latin-700italic.woff2') format('woff2');
-    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD, U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
-  }
+    font-display: swap;
+}
+
 
 html {
     font-size: 16px;
@@ -44,7 +26,7 @@ html {
 }
 
 body {
-    font-family: "Comic Code","Droid Sans Fallback","Open Sans","Clear Sans", "Helvetica Neue", Helvetica, Arial, 'Segoe UI Emoji', sans-serif;
+    font-family: 'Hack',"Droid Sans Fallback", monospace;
     color: rgb(51, 51, 51);
     line-height: 1.6;
 }
@@ -225,7 +207,9 @@ thead {
     background-color: #f8f8f8;
 }
 table th {
-    font-weight: bold;
+    font-weight: 400 !important;
+    font-style: normal;
+    text-decoration: none;
     border: 1px solid #dfe2e5;
     border-bottom: 0;
     margin: 0;
@@ -262,7 +246,7 @@ tt {
     border-radius: 3px;
     padding: 2px 4px 0px 4px;
     font-size: 0.9em;
-    font: 'Comic Code', monospace;
+    font: 'Hack', monospace;
 }
 
 
@@ -293,7 +277,7 @@ tt {
 
 .md-fences {
 	background-color: #f8f8f8;
-	font-family: 'Comic Code', monospace;
+	font-family: 'Hack', monospace;
 }
 #write pre.md-meta-block {
 	padding: 1rem;
@@ -420,7 +404,7 @@ code {
     background-color: #F9F2F4; /* 背景颜色 */
     color: #C7254E; /* 字体颜色 */
     padding: 2px 4px; /* 内边距，符合图片的 2px 4px */
-    font-family: "Comic Code", "DejaVu Sans Mono", Menlo, Monaco, Consolas, "Courier New", monospace; /* 字体设置 */
+    font-family: 'Hack', monospace; /* 字体设置 */
     border-radius: 3px; /* 边框圆角 */
     white-space: nowrap; /* 防止换行 */
     border: none; /* 去除边框 */
