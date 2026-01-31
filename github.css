@@ -12,7 +12,7 @@
     font-display: swap;
 }
 @font-face {
-    font-family: "Droid Sans Fallback";
+    font-family: 'Droid Sans Fallback';
     src: url('./Github/DroidSansFallback.ttf') format('truetype');
     font-weight: 400;
     font-style: normal;
@@ -26,7 +26,7 @@ html {
 }
 
 body {
-    font-family: 'Hack',"Droid Sans Fallback", monospace;
+    font-family: 'Hack','Droid Sans Fallback', monospace;
     color: rgb(51, 51, 51);
     line-height: 1.6;
 }
@@ -246,7 +246,7 @@ tt {
     border-radius: 3px;
     padding: 2px 4px 0px 4px;
     font-size: 0.9em;
-    font: 'Hack', monospace;
+    font: 'Hack', 'Droid Sans Fallback', monospace;
 }
 
 
@@ -277,7 +277,7 @@ tt {
 
 .md-fences {
 	background-color: #f8f8f8;
-	font-family: 'Hack', monospace;
+	font-family: 'Hack', 'Droid Sans Fallback', monospace;
 }
 #write pre.md-meta-block {
 	padding: 1rem;
@@ -404,7 +404,7 @@ code {
     background-color: #F9F2F4; /* 背景颜色 */
     color: #C7254E; /* 字体颜色 */
     padding: 2px 4px; /* 内边距，符合图片的 2px 4px */
-    font-family: 'Hack', monospace; /* 字体设置 */
+    font-family: 'Hack', 'Droid Sans Fallback', monospace; /* 字体设置 */
     border-radius: 3px; /* 边框圆角 */
     white-space: nowrap; /* 防止换行 */
     border: none; /* 去除边框 */
