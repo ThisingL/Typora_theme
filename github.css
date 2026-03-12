@@ -50,6 +50,12 @@ body {
 	}
 }
 
+@media only screen and (min-width: 2000px) {
+    #write {
+        max-width: 1600px;  /* 4K 超大屏幕使用 */
+    }
+}
+
 #write > ul:first-child,
 #write > ol:first-child{
     margin-top: 30px;
